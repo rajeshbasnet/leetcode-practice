@@ -8,7 +8,7 @@ public class Sqrt {
 
         while(low <= high) {
             int mid = low + (high - low) / 2; // 0 - 9 // 4.5 // 4// 4 * 4 == 16 // 2 * 2 = 4
-            int mValue = mid * mid;
+            long mValue = (long) mid * mid; // since constraint 0 <= x <= 2^31 - 1, integer might overflow when multiplied
 
             if(mValue == x) {
 
